@@ -1,0 +1,12 @@
+<div class="container">
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+</nav>
+
+  <h1>All Articles</h1>
+  <% @articles.each do |article| %>
+    <h3><%= link_to article.title, article_path(article) %></h3>
+  <% end %>
+
+  <div><%= link_to "New Article", new_article_path, class: "btn btn-primary" %></div>
+</div>
